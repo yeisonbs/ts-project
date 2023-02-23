@@ -1,7 +1,7 @@
 
 (async ()=> {
   const myCart = [];
-  const products = [];
+  const products: string | any[] = [];
   const limit = 2;
 
   async function getProducts() {
