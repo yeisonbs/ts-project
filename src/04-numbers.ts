@@ -10,7 +10,7 @@
 
    //Serán señalados como errores aquellas variables
    // que queramos usar sin haberles dado un valor inicial:
-   let productInStock: number;
+   let productInStock: number = 100;
    console.log('productInStock', productInStock);
    if (productInStock > 10) {
      console.log('is greater');
