@@ -1,0 +1,34 @@
+//TypeScript
+let myVar = null; //Tipo any
+let otherVar = undefined; //Tipo any
+
+let myNull: null = null; // Tipo null
+let myUndefined: undefined = undefined; //Tipo undefined
+
+let myNumber: number | null = null;
+myNumber = 50;
+
+let myString: string | undefined = undefined;
+myString = "Hola TypeScript";
+
+function hi (name : string | null){
+  let hello = 'Hola';
+  if(name){
+    hello += name;
+  } else{
+    hello += 'nobody';
+  }
+  console.log(hello);
+}
+
+function hiv2 (name : string | null){
+  let hello = 'Hola';
+  //si el primer es null entonces ejecuta la 2da instruccion.con ?
+    hello += name?.toLowerCase() || 'nobody';
+  console.log(hello);
+  }
+
+
+/*el Optional chaining lo uso mucho cuando trabajo con apis
+ cuya respuesta tarda. Como durante unos milisegundos no esta definido lo que traigo de la api, evito que
+absolutamente toda la pagina me quede en blanco y me aparezca el error por consola*/
